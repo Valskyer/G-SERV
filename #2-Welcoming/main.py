@@ -1,7 +1,9 @@
 import discord
 
 token = 'YOUR BOT TOKEN HERE'
-client = discord.Client()
+intents = discord.Intents.default()
+intents.members = True
+client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
