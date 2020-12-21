@@ -11,9 +11,9 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-    guild = client.get_guild(790639847358464102) # YOUR INTEGER GUILD ID HERE
-    welcome_channel = guild.get_channel(790639847970308098) # YOUR INTEGER CHANNEL ID HERE
-    role = guild.get_role(790645252004118538) # YOUR INTEGER ROLE ID HERE
+    guild = client.get_guild() # YOUR INTEGER GUILD ID HERE
+    welcome_channel = guild.get_channel() # YOUR INTEGER CHANNEL ID HERE
+    role = guild.get_role() # YOUR INTEGER ROLE ID HERE
     await member.add_roles(role)
     await welcome_channel.send(f'Welcome to the {guild.name} Discord Server, {member.mention} !  :partying_face:')
     await member.send(f'We are glad to have you in the {guild.name} Discord Server, {member.name} !  :partying_face:')
